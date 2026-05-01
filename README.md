@@ -19,16 +19,7 @@ TUI for searching and downloading MIT Manipal question papers from the library p
 
 The app first uses `./index.json` if one exists in your current directory. Otherwise it falls back to the packaged `pypfetcher/index.json` that was installed with the tool.
 
-## Refreshing the bundled index
-
-To rebuild the installed default index and keep `pypfetcher` runnable from anywhere:
-
-```bash
-python3 crawl.py --start-year 2022 --end-year 2025 --out src/pypfetcher/index.json
-python3 -m pip install --user -e .
-```
-
-## Local override
+## Local override (optional, for papers outside of 2022-25 range)
 
 You can also build a one-off local index for the current directory. That local `./index.json` takes priority over the bundled one:
 
