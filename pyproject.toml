@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypfetcher"
+version = "0.1.0"
+description = "A TUI for fetching and browsing Manipal question papers"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "textual",
+]
+
+[project.scripts]
+pypfetcher = "pypfetcher.tui:main"
+pyp-crawl = "pypfetcher.crawl:main"
+
+[tool.setuptools.package-data]
+pypfetcher = ["index.json"]
